@@ -98,7 +98,7 @@ def setup_mysql(username, password, host, port, database):
         # Run scrapydweb: ModuleNotFoundError: No module named 'MySQLdb'
         pymysql.install_as_MySQLdb()
 
-    conn = pymysql.connect(host=host, port=int(port), user=username, password=password, , database=database,
+    conn = pymysql.connect(host=host, port=int(port), user=username, password=password, database=database,
                            charset='utf8', cursorclass=pymysql.cursors.DictCursor)
     cur = conn.cursor()
     for dbname in DBS:
